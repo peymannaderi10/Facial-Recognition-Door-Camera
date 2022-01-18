@@ -1,0 +1,71 @@
+\hypertarget{lcdScreen_8h}{}\section{lcd\+Screen.\+h File Reference}
+\label{lcdScreen_8h}\index{lcd\+Screen.\+h@{lcd\+Screen.\+h}}
+{\ttfamily \#include $<$wiring\+Pi.\+h$>$}\newline
+{\ttfamily \#include $<$wiring\+Pi\+I2\+C.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlcdScreen}{lcd\+Screen}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classlcdScreen}{lcd\+Screen} class used to communicate with the L\+CD screen via I2C. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lcdScreen_8h_a2e78122c7a8b3a9480ef8f898cb01c8e}{I2\+C\+\_\+\+A\+D\+DR}~0x27
+\item 
+\#define \hyperlink{lcdScreen_8h_a504633f54bf39a48675afa285af5de8c}{L\+C\+D\+\_\+\+C\+HR}~1
+\item 
+\#define \hyperlink{lcdScreen_8h_a28893b8aae31c65dfc6f5d478e225a2d}{L\+C\+D\+\_\+\+C\+MD}~0
+\item 
+\#define \hyperlink{lcdScreen_8h_a4c0102b3d63c7bd2d59a424ca3815ad1}{L\+I\+N\+E1}~0x80
+\item 
+\#define \hyperlink{lcdScreen_8h_a259e96afd23afb9e2fd9e97d5e07193c}{L\+I\+N\+E2}~0x\+C0
+\item 
+\#define \hyperlink{lcdScreen_8h_ac059d24dfe9c1e1f7c07cb7869a1833b}{L\+C\+D\+\_\+\+B\+A\+C\+K\+L\+I\+G\+HT}~0x08
+\item 
+\#define \hyperlink{lcdScreen_8h_a514ad415fb6125ba296793df7d1a468a}{E\+N\+A\+B\+LE}~0b00000100
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lcdScreen_8h_a514ad415fb6125ba296793df7d1a468a}\label{lcdScreen_8h_a514ad415fb6125ba296793df7d1a468a}} 
+\index{lcd\+Screen.\+h@{lcd\+Screen.\+h}!E\+N\+A\+B\+LE@{E\+N\+A\+B\+LE}}
+\index{E\+N\+A\+B\+LE@{E\+N\+A\+B\+LE}!lcd\+Screen.\+h@{lcd\+Screen.\+h}}
+\subsubsection{\texorpdfstring{E\+N\+A\+B\+LE}{ENABLE}}
+{\footnotesize\ttfamily \#define E\+N\+A\+B\+LE~0b00000100}
+
+\mbox{\Hypertarget{lcdScreen_8h_a2e78122c7a8b3a9480ef8f898cb01c8e}\label{lcdScreen_8h_a2e78122c7a8b3a9480ef8f898cb01c8e}} 
+\index{lcd\+Screen.\+h@{lcd\+Screen.\+h}!I2\+C\+\_\+\+A\+D\+DR@{I2\+C\+\_\+\+A\+D\+DR}}
+\index{I2\+C\+\_\+\+A\+D\+DR@{I2\+C\+\_\+\+A\+D\+DR}!lcd\+Screen.\+h@{lcd\+Screen.\+h}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+\+A\+D\+DR}{I2C\_ADDR}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+A\+D\+DR~0x27}
+
+\mbox{\Hypertarget{lcdScreen_8h_ac059d24dfe9c1e1f7c07cb7869a1833b}\label{lcdScreen_8h_ac059d24dfe9c1e1f7c07cb7869a1833b}} 
+\index{lcd\+Screen.\+h@{lcd\+Screen.\+h}!L\+C\+D\+\_\+\+B\+A\+C\+K\+L\+I\+G\+HT@{L\+C\+D\+\_\+\+B\+A\+C\+K\+L\+I\+G\+HT}}
+\index{L\+C\+D\+\_\+\+B\+A\+C\+K\+L\+I\+G\+HT@{L\+C\+D\+\_\+\+B\+A\+C\+K\+L\+I\+G\+HT}!lcd\+Screen.\+h@{lcd\+Screen.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+B\+A\+C\+K\+L\+I\+G\+HT}{LCD\_BACKLIGHT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+B\+A\+C\+K\+L\+I\+G\+HT~0x08}
+
+\mbox{\Hypertarget{lcdScreen_8h_a504633f54bf39a48675afa285af5de8c}\label{lcdScreen_8h_a504633f54bf39a48675afa285af5de8c}} 
+\index{lcd\+Screen.\+h@{lcd\+Screen.\+h}!L\+C\+D\+\_\+\+C\+HR@{L\+C\+D\+\_\+\+C\+HR}}
+\index{L\+C\+D\+\_\+\+C\+HR@{L\+C\+D\+\_\+\+C\+HR}!lcd\+Screen.\+h@{lcd\+Screen.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+C\+HR}{LCD\_CHR}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+HR~1}
+
+\mbox{\Hypertarget{lcdScreen_8h_a28893b8aae31c65dfc6f5d478e225a2d}\label{lcdScreen_8h_a28893b8aae31c65dfc6f5d478e225a2d}} 
+\index{lcd\+Screen.\+h@{lcd\+Screen.\+h}!L\+C\+D\+\_\+\+C\+MD@{L\+C\+D\+\_\+\+C\+MD}}
+\index{L\+C\+D\+\_\+\+C\+MD@{L\+C\+D\+\_\+\+C\+MD}!lcd\+Screen.\+h@{lcd\+Screen.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+C\+MD}{LCD\_CMD}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+MD~0}
+
+\mbox{\Hypertarget{lcdScreen_8h_a4c0102b3d63c7bd2d59a424ca3815ad1}\label{lcdScreen_8h_a4c0102b3d63c7bd2d59a424ca3815ad1}} 
+\index{lcd\+Screen.\+h@{lcd\+Screen.\+h}!L\+I\+N\+E1@{L\+I\+N\+E1}}
+\index{L\+I\+N\+E1@{L\+I\+N\+E1}!lcd\+Screen.\+h@{lcd\+Screen.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+E1}{LINE1}}
+{\footnotesize\ttfamily \#define L\+I\+N\+E1~0x80}
+
+\mbox{\Hypertarget{lcdScreen_8h_a259e96afd23afb9e2fd9e97d5e07193c}\label{lcdScreen_8h_a259e96afd23afb9e2fd9e97d5e07193c}} 
+\index{lcd\+Screen.\+h@{lcd\+Screen.\+h}!L\+I\+N\+E2@{L\+I\+N\+E2}}
+\index{L\+I\+N\+E2@{L\+I\+N\+E2}!lcd\+Screen.\+h@{lcd\+Screen.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+E2}{LINE2}}
+{\footnotesize\ttfamily \#define L\+I\+N\+E2~0x\+C0}
+

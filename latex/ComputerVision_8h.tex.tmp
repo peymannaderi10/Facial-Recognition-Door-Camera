@@ -1,0 +1,35 @@
+\hypertarget{ComputerVision_8h}{}\section{Computer\+Vision.\+h File Reference}
+\label{ComputerVision_8h}\index{Computer\+Vision.\+h@{Computer\+Vision.\+h}}
+
+
+Header file for \hyperlink{classComputerVision}{Computer\+Vision} class used to detect faces.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgcodecs.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgproc.\+hpp$>$}\newline
+Include dependency graph for Computer\+Vision.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classComputerVision}{Computer\+Vision}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{classComputerVision}{Computer\+Vision} class used to detect faces. 
+
+The \hyperlink{classComputerVision}{Computer\+Vision} class streams the video taken from the Raspberry Pi\textquotesingle{}s webcam. The detect\+Facein\+Footage method streams the video and sends an email to notify the user whenever a face is detected.
+
+\begin{DoxyAuthor}{Author}
+Nikita Vladimirovich Nemtcev 
+\end{DoxyAuthor}

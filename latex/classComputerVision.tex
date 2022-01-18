@@ -1,0 +1,133 @@
+\hypertarget{classComputerVision}{}\section{Computer\+Vision Class Reference}
+\label{classComputerVision}\index{Computer\+Vision@{Computer\+Vision}}
+
+
+\hyperlink{classComputerVision}{Computer\+Vision} class used to detect faces.  
+
+
+
+
+{\ttfamily \#include $<$Computer\+Vision.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classComputerVision_a0cf41397e6a6a8769319250e4637ae9c}{Computer\+Vision} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \hyperlink{classComputerVision}{Computer\+Vision} class. \end{DoxyCompactList}\item 
+\hyperlink{classComputerVision_ade7ffcea132abfa3c854b2de0fc73b86}{$\sim$\+Computer\+Vision} ()
+\begin{DoxyCompactList}\small\item\em Default destructor for the \hyperlink{classComputerVision}{Computer\+Vision} class. \end{DoxyCompactList}\item 
+void \hyperlink{classComputerVision_abe0c3d02170f802d0bea5934d359105f}{detect\+Face\+In\+Footage} ()
+\begin{DoxyCompactList}\small\item\em Streams webcam footage and detects if theres a face in the frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Rect \hyperlink{classComputerVision_aa3f9fbec2c764b3dd7e94f17cd2a31b2}{currently\+\_\+detected\+\_\+face}
+\item 
+std\+::string \hyperlink{classComputerVision_aa7fdd720db121a9cd89ed1dee5e9b227}{face\+\_\+detection\+\_\+model\+\_\+filepath}
+\item 
+double \hyperlink{classComputerVision_abf1765f5ca546b58b924b3c54f9703df}{scale}
+\item 
+std\+::vector$<$ cv\+::\+Rect $>$ \hyperlink{classComputerVision_aa64283da8be33e2187bab7f4bdf177aa}{faces}
+\item 
+cv\+::\+Scalar \hyperlink{classComputerVision_af85281318e654de22e153b4e77163f25}{rectangle\+\_\+colour}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classComputerVision}{Computer\+Vision} class used to detect faces. 
+
+The \hyperlink{classComputerVision}{Computer\+Vision} class streams the video taken from the Raspberry Pi\textquotesingle{}s webcam. The detect\+Facein\+Footage method streams the video and sends an email to notify the user whenever a face is detected.
+
+\begin{DoxyAuthor}{Author}
+Nikita Vladimirovich Nemtcev 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classComputerVision_a0cf41397e6a6a8769319250e4637ae9c}\label{classComputerVision_a0cf41397e6a6a8769319250e4637ae9c}} 
+\index{Computer\+Vision@{Computer\+Vision}!Computer\+Vision@{Computer\+Vision}}
+\index{Computer\+Vision@{Computer\+Vision}!Computer\+Vision@{Computer\+Vision}}
+\subsubsection{\texorpdfstring{Computer\+Vision()}{ComputerVision()}}
+{\footnotesize\ttfamily Computer\+Vision\+::\+Computer\+Vision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \hyperlink{classComputerVision}{Computer\+Vision} class. 
+
+This is the default constructor for the \hyperlink{classComputerVision}{Computer\+Vision} class. It sets the path to the facial detection model, the scale for the webcam frames, and the colour of the rectangle that is drawn around a detected face.
+
+\begin{DoxyAuthor}{Author}
+Nikita Vladimirovich Nemtcev 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classComputerVision_ade7ffcea132abfa3c854b2de0fc73b86}\label{classComputerVision_ade7ffcea132abfa3c854b2de0fc73b86}} 
+\index{Computer\+Vision@{Computer\+Vision}!````~Computer\+Vision@{$\sim$\+Computer\+Vision}}
+\index{````~Computer\+Vision@{$\sim$\+Computer\+Vision}!Computer\+Vision@{Computer\+Vision}}
+\subsubsection{\texorpdfstring{$\sim$\+Computer\+Vision()}{~ComputerVision()}}
+{\footnotesize\ttfamily Computer\+Vision\+::$\sim$\+Computer\+Vision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor for the \hyperlink{classComputerVision}{Computer\+Vision} class. 
+
+This is the default destructor for the \hyperlink{classComputerVision}{Computer\+Vision} class. It does not need to do anything.
+
+\begin{DoxyAuthor}{Author}
+Nikita Vladimirovich Nemtcev 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classComputerVision_abe0c3d02170f802d0bea5934d359105f}\label{classComputerVision_abe0c3d02170f802d0bea5934d359105f}} 
+\index{Computer\+Vision@{Computer\+Vision}!detect\+Face\+In\+Footage@{detect\+Face\+In\+Footage}}
+\index{detect\+Face\+In\+Footage@{detect\+Face\+In\+Footage}!Computer\+Vision@{Computer\+Vision}}
+\subsubsection{\texorpdfstring{detect\+Face\+In\+Footage()}{detectFaceInFootage()}}
+{\footnotesize\ttfamily void Computer\+Vision\+::detect\+Face\+In\+Footage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Streams webcam footage and detects if theres a face in the frame. 
+
+The \hyperlink{classComputerVision_abe0c3d02170f802d0bea5934d359105f}{detect\+Face\+In\+Footage()} function streams the video captured by the Pi\textquotesingle{}s webcam and detects when there is a face in the frame. When a face is detected, an email is sent to notify the user. The function then delays for 30 seconds so that emails are not sent indefinitely until the person in front of the webcam moves.
+
+\begin{DoxyAuthor}{Author}
+Nikita Vladimirovich Nemtcev 
+\end{DoxyAuthor}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classComputerVision_aa3f9fbec2c764b3dd7e94f17cd2a31b2}\label{classComputerVision_aa3f9fbec2c764b3dd7e94f17cd2a31b2}} 
+\index{Computer\+Vision@{Computer\+Vision}!currently\+\_\+detected\+\_\+face@{currently\+\_\+detected\+\_\+face}}
+\index{currently\+\_\+detected\+\_\+face@{currently\+\_\+detected\+\_\+face}!Computer\+Vision@{Computer\+Vision}}
+\subsubsection{\texorpdfstring{currently\+\_\+detected\+\_\+face}{currently\_detected\_face}}
+{\footnotesize\ttfamily cv\+::\+Rect Computer\+Vision\+::currently\+\_\+detected\+\_\+face\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classComputerVision_aa7fdd720db121a9cd89ed1dee5e9b227}\label{classComputerVision_aa7fdd720db121a9cd89ed1dee5e9b227}} 
+\index{Computer\+Vision@{Computer\+Vision}!face\+\_\+detection\+\_\+model\+\_\+filepath@{face\+\_\+detection\+\_\+model\+\_\+filepath}}
+\index{face\+\_\+detection\+\_\+model\+\_\+filepath@{face\+\_\+detection\+\_\+model\+\_\+filepath}!Computer\+Vision@{Computer\+Vision}}
+\subsubsection{\texorpdfstring{face\+\_\+detection\+\_\+model\+\_\+filepath}{face\_detection\_model\_filepath}}
+{\footnotesize\ttfamily std\+::string Computer\+Vision\+::face\+\_\+detection\+\_\+model\+\_\+filepath\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classComputerVision_aa64283da8be33e2187bab7f4bdf177aa}\label{classComputerVision_aa64283da8be33e2187bab7f4bdf177aa}} 
+\index{Computer\+Vision@{Computer\+Vision}!faces@{faces}}
+\index{faces@{faces}!Computer\+Vision@{Computer\+Vision}}
+\subsubsection{\texorpdfstring{faces}{faces}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Rect$>$ Computer\+Vision\+::faces\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classComputerVision_af85281318e654de22e153b4e77163f25}\label{classComputerVision_af85281318e654de22e153b4e77163f25}} 
+\index{Computer\+Vision@{Computer\+Vision}!rectangle\+\_\+colour@{rectangle\+\_\+colour}}
+\index{rectangle\+\_\+colour@{rectangle\+\_\+colour}!Computer\+Vision@{Computer\+Vision}}
+\subsubsection{\texorpdfstring{rectangle\+\_\+colour}{rectangle\_colour}}
+{\footnotesize\ttfamily cv\+::\+Scalar Computer\+Vision\+::rectangle\+\_\+colour\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classComputerVision_abf1765f5ca546b58b924b3c54f9703df}\label{classComputerVision_abf1765f5ca546b58b924b3c54f9703df}} 
+\index{Computer\+Vision@{Computer\+Vision}!scale@{scale}}
+\index{scale@{scale}!Computer\+Vision@{Computer\+Vision}}
+\subsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily double Computer\+Vision\+::scale\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ComputerVision_8h}{Computer\+Vision.\+h}\item 
+\hyperlink{ComputerVision_8cpp}{Computer\+Vision.\+cpp}\end{DoxyCompactItemize}

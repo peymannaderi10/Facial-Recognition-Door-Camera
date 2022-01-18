@@ -1,0 +1,154 @@
+\hypertarget{classController}{}\section{Controller Class Reference}
+\label{classController}\index{Controller@{Controller}}
+
+
+\hyperlink{classController}{Controller} class used to control the hardware \hyperlink{classInputs}{Inputs} and \hyperlink{classOutputs}{Outputs}.  
+
+
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classController_a95c56822d667e94b031451729ce069a9}{Controller} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \hyperlink{classController}{Controller} class. \end{DoxyCompactList}\item 
+\hyperlink{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}{$\sim$\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Default destructor for the \hyperlink{classController}{Controller} class. \end{DoxyCompactList}\item 
+void \hyperlink{classController_aa11154b00ad33bb5a54f4e66bd279f23}{check\+Input} ()
+\begin{DoxyCompactList}\small\item\em Checks for inputs from the Input class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classController_a783956d7ffd422c814c8d62926c38f5c}{change\+State} ()
+\begin{DoxyCompactList}\small\item\em Calls the \hyperlink{classController_a783956d7ffd422c814c8d62926c38f5c}{change\+State()} method in the \hyperlink{classOutputs}{Outputs} class. \end{DoxyCompactList}\item 
+void \hyperlink{classController_a051818aaff4b6e373881e1878faeaca7}{ring\+Alarm} ()
+\begin{DoxyCompactList}\small\item\em Calls the alarm() method in the Output class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInputs}{Inputs} \hyperlink{classController_a92f87bee57ce9161bb5df6b5e69fedb7}{user\+Input}
+\item 
+\hyperlink{classOutputs}{Outputs} \hyperlink{classController_a3eb48522d8dd1a23add8245718b32afc}{door\+Output}
+\item 
+bool \hyperlink{classController_a9101b152cf0c199bc384d977d61292c6}{is\+Door\+Locked}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classController}{Controller} class used to control the hardware \hyperlink{classInputs}{Inputs} and \hyperlink{classOutputs}{Outputs}. 
+
+The \hyperlink{classController}{Controller} class controls the physical state of the door by storing the current state of the system (locked or unlocked) and calling the appropriate methods of both the \hyperlink{classInputs}{Inputs} and \hyperlink{classOutputs}{Outputs} classes.
+
+\begin{DoxyAuthor}{Author}
+Muhammed Askri 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classController_a95c56822d667e94b031451729ce069a9}\label{classController_a95c56822d667e94b031451729ce069a9}} 
+\index{Controller@{Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{Controller()}{Controller()}}
+{\footnotesize\ttfamily Controller\+::\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \hyperlink{classController}{Controller} class. 
+
+This is the default constructor for the \hyperlink{classController}{Controller} class. It sets the boolean value used to store the state of the system as false (unlocked).
+
+\begin{DoxyAuthor}{Author}
+Muhammed Askri 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}\label{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}} 
+\index{Controller@{Controller}!````~Controller@{$\sim$\+Controller}}
+\index{````~Controller@{$\sim$\+Controller}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{$\sim$\+Controller()}{~Controller()}}
+{\footnotesize\ttfamily Controller\+::$\sim$\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor for the \hyperlink{classController}{Controller} class. 
+
+This is the default destructor for the \hyperlink{classController}{Controller} class. It unlocks the door.
+
+\begin{DoxyAuthor}{Author}
+Muhammed Askri 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classController_a783956d7ffd422c814c8d62926c38f5c}\label{classController_a783956d7ffd422c814c8d62926c38f5c}} 
+\index{Controller@{Controller}!change\+State@{change\+State}}
+\index{change\+State@{change\+State}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{change\+State()}{changeState()}}
+{\footnotesize\ttfamily void Controller\+::change\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calls the \hyperlink{classController_a783956d7ffd422c814c8d62926c38f5c}{change\+State()} method in the \hyperlink{classOutputs}{Outputs} class. 
+
+The \hyperlink{classController_a783956d7ffd422c814c8d62926c38f5c}{change\+State()} function calls the Output \hyperlink{classController_a783956d7ffd422c814c8d62926c38f5c}{change\+State()} method using the private \hyperlink{classOutputs}{Outputs} member.
+
+\begin{DoxyAuthor}{Author}
+Muhammed Askri 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classController_aa11154b00ad33bb5a54f4e66bd279f23}\label{classController_aa11154b00ad33bb5a54f4e66bd279f23}} 
+\index{Controller@{Controller}!check\+Input@{check\+Input}}
+\index{check\+Input@{check\+Input}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{check\+Input()}{checkInput()}}
+{\footnotesize\ttfamily void Controller\+::check\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks for inputs from the Input class. 
+
+The \hyperlink{classController_aa11154b00ad33bb5a54f4e66bd279f23}{check\+Input()} function checks if either the change\+State or alarm buttons have been pressed, and calls the appropriate function if either button has been pressed. The \hyperlink{classInputs}{Inputs} \hyperlink{classController_a783956d7ffd422c814c8d62926c38f5c}{change\+State()} and set\+Off\+Alarm() member functions are used to check if either button has been pressed using the private Input member.
+
+\begin{DoxyAuthor}{Author}
+Muhammed Askri 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classController_a051818aaff4b6e373881e1878faeaca7}\label{classController_a051818aaff4b6e373881e1878faeaca7}} 
+\index{Controller@{Controller}!ring\+Alarm@{ring\+Alarm}}
+\index{ring\+Alarm@{ring\+Alarm}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{ring\+Alarm()}{ringAlarm()}}
+{\footnotesize\ttfamily void Controller\+::ring\+Alarm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calls the alarm() method in the Output class. 
+
+The \hyperlink{classController_a051818aaff4b6e373881e1878faeaca7}{ring\+Alarm()} function calls the \hyperlink{classOutputs}{Outputs} alarm() method using the private \hyperlink{classOutputs}{Outputs} member.
+
+\begin{DoxyAuthor}{Author}
+Muhammed Askri 
+\end{DoxyAuthor}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classController_a3eb48522d8dd1a23add8245718b32afc}\label{classController_a3eb48522d8dd1a23add8245718b32afc}} 
+\index{Controller@{Controller}!door\+Output@{door\+Output}}
+\index{door\+Output@{door\+Output}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{door\+Output}{doorOutput}}
+{\footnotesize\ttfamily \hyperlink{classOutputs}{Outputs} Controller\+::door\+Output\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classController_a9101b152cf0c199bc384d977d61292c6}\label{classController_a9101b152cf0c199bc384d977d61292c6}} 
+\index{Controller@{Controller}!is\+Door\+Locked@{is\+Door\+Locked}}
+\index{is\+Door\+Locked@{is\+Door\+Locked}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{is\+Door\+Locked}{isDoorLocked}}
+{\footnotesize\ttfamily bool Controller\+::is\+Door\+Locked\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classController_a92f87bee57ce9161bb5df6b5e69fedb7}\label{classController_a92f87bee57ce9161bb5df6b5e69fedb7}} 
+\index{Controller@{Controller}!user\+Input@{user\+Input}}
+\index{user\+Input@{user\+Input}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{user\+Input}{userInput}}
+{\footnotesize\ttfamily \hyperlink{classInputs}{Inputs} Controller\+::user\+Input\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Controller_8h}{Controller.\+h}\item 
+\hyperlink{Controller_8cpp}{Controller.\+cpp}\end{DoxyCompactItemize}

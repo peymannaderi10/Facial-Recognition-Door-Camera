@@ -1,0 +1,124 @@
+\hypertarget{classInputs}{}\section{Inputs Class Reference}
+\label{classInputs}\index{Inputs@{Inputs}}
+
+
+\hyperlink{classInputs}{Inputs} class used to read the state of the buttons.  
+
+
+
+
+{\ttfamily \#include $<$Inputs.\+h$>$}
+
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInputs_abd859d2c8a001153eb26aeeac263ed3d}{Inputs} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \hyperlink{classInputs}{Inputs} class. \end{DoxyCompactList}\item 
+\hyperlink{classInputs_a721935d4549a704e944c056227214ca5}{$\sim$\+Inputs} ()
+\begin{DoxyCompactList}\small\item\em Default destructor for the \hyperlink{classInputs}{Inputs} class. \end{DoxyCompactList}\item 
+bool \hyperlink{classInputs_a44cce4556cf69290e76ed0195956a95d}{change\+State} ()
+\begin{DoxyCompactList}\small\item\em This function is used to read the state of the change\+State button. \end{DoxyCompactList}\item 
+bool \hyperlink{classInputs_a28390ec77ba03612f444292e5a13642a}{set\+Off\+Alarm} ()
+\begin{DoxyCompactList}\small\item\em This function is used to read the state of the alarm button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classInputs_ac3456fd331a58b288082abca310c7a99}{Controller}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classInputs}{Inputs} class used to read the state of the buttons. 
+
+The \hyperlink{classInputs}{Inputs} class initializes the buttons as inputs using wiring\+Pi and monitors their status (pressed or unpressed). The member functions used are declared as private, however the \hyperlink{classController}{Controller} class is declared as a friend as the \hyperlink{classController}{Controller} class should be the only class with access to these member functions.
+
+\begin{DoxyAuthor}{Author}
+Peyman Naderi 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInputs_abd859d2c8a001153eb26aeeac263ed3d}\label{classInputs_abd859d2c8a001153eb26aeeac263ed3d}} 
+\index{Inputs@{Inputs}!Inputs@{Inputs}}
+\index{Inputs@{Inputs}!Inputs@{Inputs}}
+\subsubsection{\texorpdfstring{Inputs()}{Inputs()}}
+{\footnotesize\ttfamily Inputs\+::\+Inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default constructor for the \hyperlink{classInputs}{Inputs} class. 
+
+This is the default constructor for the \hyperlink{classInputs}{Inputs} class. It sets the two button pins used as inputs and initalizes pull-\/down resistors for these pins.
+
+\begin{DoxyAuthor}{Author}
+Peyman Naderi 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classInputs_a721935d4549a704e944c056227214ca5}\label{classInputs_a721935d4549a704e944c056227214ca5}} 
+\index{Inputs@{Inputs}!````~Inputs@{$\sim$\+Inputs}}
+\index{````~Inputs@{$\sim$\+Inputs}!Inputs@{Inputs}}
+\subsubsection{\texorpdfstring{$\sim$\+Inputs()}{~Inputs()}}
+{\footnotesize\ttfamily Inputs\+::$\sim$\+Inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default destructor for the \hyperlink{classInputs}{Inputs} class. 
+
+This is the default destructor for the \hyperlink{classInputs}{Inputs} class. It does not need to do anything.
+
+\begin{DoxyAuthor}{Author}
+Peyman Naderi 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classInputs_a44cce4556cf69290e76ed0195956a95d}\label{classInputs_a44cce4556cf69290e76ed0195956a95d}} 
+\index{Inputs@{Inputs}!change\+State@{change\+State}}
+\index{change\+State@{change\+State}!Inputs@{Inputs}}
+\subsubsection{\texorpdfstring{change\+State()}{changeState()}}
+{\footnotesize\ttfamily bool Inputs\+::change\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function is used to read the state of the change\+State button. 
+
+This function reads the state of the change\+State button. If if has been pressed, the function waits until the button has been released, and returns true. If it has not been pressed, it returns false.
+
+\begin{DoxyReturn}{Returns}
+Boolean true if button has been pressed, false otherwise 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Peyman Naderi 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classInputs_a28390ec77ba03612f444292e5a13642a}\label{classInputs_a28390ec77ba03612f444292e5a13642a}} 
+\index{Inputs@{Inputs}!set\+Off\+Alarm@{set\+Off\+Alarm}}
+\index{set\+Off\+Alarm@{set\+Off\+Alarm}!Inputs@{Inputs}}
+\subsubsection{\texorpdfstring{set\+Off\+Alarm()}{setOffAlarm()}}
+{\footnotesize\ttfamily bool Inputs\+::set\+Off\+Alarm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function is used to read the state of the alarm button. 
+
+This function reads the state of the alarm button. If if has been pressed, the function waits until the button has been released, and returns true. If it has not been pressed, it returns false.
+
+\begin{DoxyReturn}{Returns}
+Boolean True if button has been pressed, false otherwise 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Peyman Naderi 
+\end{DoxyAuthor}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classInputs_ac3456fd331a58b288082abca310c7a99}\label{classInputs_ac3456fd331a58b288082abca310c7a99}} 
+\index{Inputs@{Inputs}!Controller@{Controller}}
+\index{Controller@{Controller}!Inputs@{Inputs}}
+\subsubsection{\texorpdfstring{Controller}{Controller}}
+{\footnotesize\ttfamily friend class \hyperlink{classController}{Controller}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Inputs_8h}{Inputs.\+h}\item 
+\hyperlink{Inputs_8cpp}{Inputs.\+cpp}\end{DoxyCompactItemize}

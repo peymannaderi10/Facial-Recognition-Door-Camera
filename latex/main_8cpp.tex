@@ -1,0 +1,49 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include \char`\"{}Controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Computer\+Vision.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a58030615808181acc26b9ea47e0405ef}{thread\+Function} ()
+\begin{DoxyCompactList}\small\item\em Stream video using the \hyperlink{classComputerVision}{Computer\+Vision} class. \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Main function to initialize the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function to initialize the system. 
+
+The main function initializes the system by using two threads. One thread is used to call the \hyperlink{classComputerVision}{Computer\+Vision} detect\+Face\+In\+Footage() member function. This function has a forever loop which constantly checks to see if a face is detected. If a face is detected, the owner of the door lock system is notified via email. The parent thread is used to constantly check if any of the input buttons have been pressed. The \hyperlink{classController}{Controller} check\+Input() member function is used to do this. If a button has been pressed, the \hyperlink{classController}{Controller} member in the main function will change the state of the system appropriately. Note that threading is necessary to allow the system to both see if a person is present (using the Computer Vision software) or see if a button has been pressed at any point while the system is running.
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Brandon Altieri 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{main_8cpp_a58030615808181acc26b9ea47e0405ef}\label{main_8cpp_a58030615808181acc26b9ea47e0405ef}} 
+\index{main.\+cpp@{main.\+cpp}!thread\+Function@{thread\+Function}}
+\index{thread\+Function@{thread\+Function}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{thread\+Function()}{threadFunction()}}
+{\footnotesize\ttfamily void thread\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stream video using the \hyperlink{classComputerVision}{Computer\+Vision} class. 
+
+This function is called from \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()} when a new thread is created. It creates a \hyperlink{classComputerVision}{Computer\+Vision} object, and calls the detect\+Facein\+Footage() function so that the the system is always checking if there is a person\textquotesingle{}s face present.
+
+\begin{DoxyAuthor}{Author}
+Brandon Altieri 
+\end{DoxyAuthor}

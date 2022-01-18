@@ -1,0 +1,149 @@
+\hypertarget{classOutputs}{}\section{Outputs Class Reference}
+\label{classOutputs}\index{Outputs@{Outputs}}
+
+
+\hyperlink{classOutputs}{Outputs} class used to control the output hardware.  
+
+
+
+
+{\ttfamily \#include $<$Outputs.\+h$>$}
+
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOutputs_a86768c5f5c0ce6ab00c4bac00f3b5e63}{Outputs} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \hyperlink{classOutputs}{Outputs} class. \end{DoxyCompactList}\item 
+\hyperlink{classOutputs_a77531126d059e84abe973ded897f6cf1}{$\sim$\+Outputs} ()
+\begin{DoxyCompactList}\small\item\em Default destructor for the \hyperlink{classOutputs}{Outputs} class. \end{DoxyCompactList}\item 
+void \hyperlink{classOutputs_a7f65875e7cbaf23acdd6c003726505fd}{door\+Lock} ()
+\begin{DoxyCompactList}\small\item\em This function sets all the hardware to the locked state. \end{DoxyCompactList}\item 
+void \hyperlink{classOutputs_ad29c1e1eda4267feb3ffa7c41a5190c5}{door\+Unlock} ()
+\begin{DoxyCompactList}\small\item\em This function sets all the hardware to the unlocked state. \end{DoxyCompactList}\item 
+void \hyperlink{classOutputs_a610431c941db0b5c750f55ae47ce1783}{alarm} ()
+\begin{DoxyCompactList}\small\item\em This function sets off the alarm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlcdScreen}{lcd\+Screen} \hyperlink{classOutputs_a75eb0439cced956d5756a3d965e528d0}{lcd}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classOutputs_ac3456fd331a58b288082abca310c7a99}{Controller}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classOutputs}{Outputs} class used to control the output hardware. 
+
+The \hyperlink{classOutputs}{Outputs} class initializes all output hardware as outputs, and physically changes the state of the system. Also, the alarm can be set off using the \hyperlink{classOutputs_a610431c941db0b5c750f55ae47ce1783}{alarm()} member function. The hardware controlled by this class includes red and green L\+E\+Ds, a solenoid (the door lock), and a piezo electric buzzer (alarm). The member functions used are declared as private, however the \hyperlink{classController}{Controller} class is declared as a friend as the \hyperlink{classController}{Controller} class should be the only class with access to these member functions.
+
+\begin{DoxyAuthor}{Author}
+Syed Abdullah Tufail 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOutputs_a86768c5f5c0ce6ab00c4bac00f3b5e63}\label{classOutputs_a86768c5f5c0ce6ab00c4bac00f3b5e63}} 
+\index{Outputs@{Outputs}!Outputs@{Outputs}}
+\index{Outputs@{Outputs}!Outputs@{Outputs}}
+\subsubsection{\texorpdfstring{Outputs()}{Outputs()}}
+{\footnotesize\ttfamily Outputs\+::\+Outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default constructor for the \hyperlink{classOutputs}{Outputs} class. 
+
+This is the default constructor for the \hyperlink{classOutputs}{Outputs} class. It sets all output pins used as outputs and unlocks the system.
+
+\begin{DoxyAuthor}{Author}
+Syed Abdullah Tufail 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classOutputs_a77531126d059e84abe973ded897f6cf1}\label{classOutputs_a77531126d059e84abe973ded897f6cf1}} 
+\index{Outputs@{Outputs}!````~Outputs@{$\sim$\+Outputs}}
+\index{````~Outputs@{$\sim$\+Outputs}!Outputs@{Outputs}}
+\subsubsection{\texorpdfstring{$\sim$\+Outputs()}{~Outputs()}}
+{\footnotesize\ttfamily Outputs\+::$\sim$\+Outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default destructor for the \hyperlink{classOutputs}{Outputs} class. 
+
+This is the default destructor for the \hyperlink{classOutputs}{Outputs} class. It unlocks the system.
+
+\begin{DoxyAuthor}{Author}
+Syed Abdullah Tufail 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classOutputs_a610431c941db0b5c750f55ae47ce1783}\label{classOutputs_a610431c941db0b5c750f55ae47ce1783}} 
+\index{Outputs@{Outputs}!alarm@{alarm}}
+\index{alarm@{alarm}!Outputs@{Outputs}}
+\subsubsection{\texorpdfstring{alarm()}{alarm()}}
+{\footnotesize\ttfamily void Outputs\+::alarm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function sets off the alarm. 
+
+This function set off the piezo electric buzzer (alarm). The buzzer is turned on and off repeatedly to simulate an alarm.
+
+\begin{DoxyAuthor}{Author}
+Syed Abdullah Tufail 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classOutputs_a7f65875e7cbaf23acdd6c003726505fd}\label{classOutputs_a7f65875e7cbaf23acdd6c003726505fd}} 
+\index{Outputs@{Outputs}!door\+Lock@{door\+Lock}}
+\index{door\+Lock@{door\+Lock}!Outputs@{Outputs}}
+\subsubsection{\texorpdfstring{door\+Lock()}{doorLock()}}
+{\footnotesize\ttfamily void Outputs\+::door\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function sets all the hardware to the locked state. 
+
+This function sets all the hardware to the locked state. Specifically, the green L\+ED is turned off, the red L\+ED is turned on, and the solenoid is turned on. The message on the L\+CD is changed to show that the system is locked.
+
+\begin{DoxyAuthor}{Author}
+Syed Abdullah Tufail 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classOutputs_ad29c1e1eda4267feb3ffa7c41a5190c5}\label{classOutputs_ad29c1e1eda4267feb3ffa7c41a5190c5}} 
+\index{Outputs@{Outputs}!door\+Unlock@{door\+Unlock}}
+\index{door\+Unlock@{door\+Unlock}!Outputs@{Outputs}}
+\subsubsection{\texorpdfstring{door\+Unlock()}{doorUnlock()}}
+{\footnotesize\ttfamily void Outputs\+::door\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function sets all the hardware to the unlocked state. 
+
+This function sets all the hardware to the unlocked state. Specifically, the green L\+ED is turned on, the red L\+ED is turned off, and the solenoid is turned off. The message on the L\+CD is changed to show that the system is unlocked.
+
+\begin{DoxyAuthor}{Author}
+Syed Abdullah Tufail 
+\end{DoxyAuthor}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classOutputs_ac3456fd331a58b288082abca310c7a99}\label{classOutputs_ac3456fd331a58b288082abca310c7a99}} 
+\index{Outputs@{Outputs}!Controller@{Controller}}
+\index{Controller@{Controller}!Outputs@{Outputs}}
+\subsubsection{\texorpdfstring{Controller}{Controller}}
+{\footnotesize\ttfamily friend class \hyperlink{classController}{Controller}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classOutputs_a75eb0439cced956d5756a3d965e528d0}\label{classOutputs_a75eb0439cced956d5756a3d965e528d0}} 
+\index{Outputs@{Outputs}!lcd@{lcd}}
+\index{lcd@{lcd}!Outputs@{Outputs}}
+\subsubsection{\texorpdfstring{lcd}{lcd}}
+{\footnotesize\ttfamily \hyperlink{classlcdScreen}{lcd\+Screen} Outputs\+::lcd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Outputs_8h}{Outputs.\+h}\item 
+\hyperlink{Outputs_8cpp}{Outputs.\+cpp}\end{DoxyCompactItemize}

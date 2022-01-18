@@ -1,0 +1,205 @@
+\hypertarget{classlcdScreen}{}\section{lcd\+Screen Class Reference}
+\label{classlcdScreen}\index{lcd\+Screen@{lcd\+Screen}}
+
+
+\hyperlink{classlcdScreen}{lcd\+Screen} class used to communicate with the L\+CD screen via I2C.  
+
+
+
+
+{\ttfamily \#include $<$lcd\+Screen.\+h$>$}
+
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlcdScreen_a23766b7b298478e9a04d44e9a785152d}{lcd\+Screen} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \hyperlink{classlcdScreen}{lcd\+Screen} class. \end{DoxyCompactList}\item 
+\hyperlink{classlcdScreen_a6152bfe573104feced7d836e1eff4d8d}{$\sim$lcd\+Screen} ()
+\begin{DoxyCompactList}\small\item\em Default destructor for the \hyperlink{classlcdScreen}{lcd\+Screen} class. \end{DoxyCompactList}\item 
+void \hyperlink{classlcdScreen_a3762af911a7fbf78839f0edcd547e042}{lcd\+\_\+byte} (int bits, int mode)
+\begin{DoxyCompactList}\small\item\em This function is used to send a byte of data to the L\+CD. \end{DoxyCompactList}\item 
+void \hyperlink{classlcdScreen_a070d49963617592f52e359e78dcc1160}{lcd\+\_\+toggle\+\_\+enable} (int bits)
+\begin{DoxyCompactList}\small\item\em This function is used to toggle the enable pin. \end{DoxyCompactList}\item 
+void \hyperlink{classlcdScreen_a5c1031c6ad92f717e4cec1f9ac6c02c5}{Clr\+Lcd} ()
+\begin{DoxyCompactList}\small\item\em This function clears the L\+CD. \end{DoxyCompactList}\item 
+void \hyperlink{classlcdScreen_a58dd837a0783c439a50d11df6fc19d43}{typeln} (const char $\ast$s)
+\begin{DoxyCompactList}\small\item\em This function prints a string to the L\+CD. \end{DoxyCompactList}\item 
+void \hyperlink{classlcdScreen_acb273429c19f2f18a42945bf1b69af28}{lcd\+Loc} (int line)
+\begin{DoxyCompactList}\small\item\em This function puts the L\+CD cursor at the specified line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classlcdScreen_a1810308c22efd469be71020079c05d2c}{fd}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlcdScreen_af99d17c01d4ce8459247f8043b2de102}{Outputs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classlcdScreen}{lcd\+Screen} class used to communicate with the L\+CD screen via I2C. 
+
+The \hyperlink{classlcdScreen}{lcd\+Screen} uses wiring\+Pi and wiring\+Pi\+I2C to communicate with the L\+CD screen via the I2C communication protocol. The member functions used are declared as private, however the \hyperlink{classOutputs}{Outputs} class is declared as a friend as the \hyperlink{classOutputs}{Outputs} class should be the only class with access to these member functions.
+
+\begin{DoxyAuthor}{Author}
+Brandon Altieri 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlcdScreen_a23766b7b298478e9a04d44e9a785152d}\label{classlcdScreen_a23766b7b298478e9a04d44e9a785152d}} 
+\index{lcd\+Screen@{lcd\+Screen}!lcd\+Screen@{lcd\+Screen}}
+\index{lcd\+Screen@{lcd\+Screen}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection{\texorpdfstring{lcd\+Screen()}{lcdScreen()}}
+{\footnotesize\ttfamily lcd\+Screen\+::lcd\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default constructor for the \hyperlink{classlcdScreen}{lcd\+Screen} class. 
+
+This is the default constructor for the \hyperlink{classlcdScreen}{lcd\+Screen} class. It initializes the display so that it can be controlled via I2C.
+
+\begin{DoxyAuthor}{Author}
+Brandon Altieri 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classlcdScreen_a6152bfe573104feced7d836e1eff4d8d}\label{classlcdScreen_a6152bfe573104feced7d836e1eff4d8d}} 
+\index{lcd\+Screen@{lcd\+Screen}!````~lcd\+Screen@{$\sim$lcd\+Screen}}
+\index{````~lcd\+Screen@{$\sim$lcd\+Screen}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection{\texorpdfstring{$\sim$lcd\+Screen()}{~lcdScreen()}}
+{\footnotesize\ttfamily lcd\+Screen\+::$\sim$lcd\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default destructor for the \hyperlink{classlcdScreen}{lcd\+Screen} class. 
+
+This is the default destructor for the \hyperlink{classlcdScreen}{lcd\+Screen} class. It does not need to do anything.
+
+\begin{DoxyAuthor}{Author}
+Brandon Altieri 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlcdScreen_a5c1031c6ad92f717e4cec1f9ac6c02c5}\label{classlcdScreen_a5c1031c6ad92f717e4cec1f9ac6c02c5}} 
+\index{lcd\+Screen@{lcd\+Screen}!Clr\+Lcd@{Clr\+Lcd}}
+\index{Clr\+Lcd@{Clr\+Lcd}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection{\texorpdfstring{Clr\+Lcd()}{ClrLcd()}}
+{\footnotesize\ttfamily void lcd\+Screen\+::\+Clr\+Lcd (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function clears the L\+CD. 
+
+This function is used to clear the L\+CD\textquotesingle{}s screen via I2C.
+
+\begin{DoxyAuthor}{Author}
+Brandon Altieri 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classlcdScreen_a3762af911a7fbf78839f0edcd547e042}\label{classlcdScreen_a3762af911a7fbf78839f0edcd547e042}} 
+\index{lcd\+Screen@{lcd\+Screen}!lcd\+\_\+byte@{lcd\+\_\+byte}}
+\index{lcd\+\_\+byte@{lcd\+\_\+byte}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection{\texorpdfstring{lcd\+\_\+byte()}{lcd\_byte()}}
+{\footnotesize\ttfamily void lcd\+Screen\+::lcd\+\_\+byte (\begin{DoxyParamCaption}\item[{int}]{bits,  }\item[{int}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function is used to send a byte of data to the L\+CD. 
+
+This function is used to send a byte (8 bits) of data to the L\+CD screen through I2C.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & is the data to be sent \\
+\hline
+{\em mode} & is the mode of operation (mode = 1 for data, 0 for command) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brandon Altieri 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classlcdScreen_a070d49963617592f52e359e78dcc1160}\label{classlcdScreen_a070d49963617592f52e359e78dcc1160}} 
+\index{lcd\+Screen@{lcd\+Screen}!lcd\+\_\+toggle\+\_\+enable@{lcd\+\_\+toggle\+\_\+enable}}
+\index{lcd\+\_\+toggle\+\_\+enable@{lcd\+\_\+toggle\+\_\+enable}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection{\texorpdfstring{lcd\+\_\+toggle\+\_\+enable()}{lcd\_toggle\_enable()}}
+{\footnotesize\ttfamily void lcd\+Screen\+::lcd\+\_\+toggle\+\_\+enable (\begin{DoxyParamCaption}\item[{int}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function is used to toggle the enable pin. 
+
+This function is used to flip the L\+CD\textquotesingle{}s enable pin via I2C.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & is the data to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brandon Altieri 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classlcdScreen_acb273429c19f2f18a42945bf1b69af28}\label{classlcdScreen_acb273429c19f2f18a42945bf1b69af28}} 
+\index{lcd\+Screen@{lcd\+Screen}!lcd\+Loc@{lcd\+Loc}}
+\index{lcd\+Loc@{lcd\+Loc}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection{\texorpdfstring{lcd\+Loc()}{lcdLoc()}}
+{\footnotesize\ttfamily void lcd\+Screen\+::lcd\+Loc (\begin{DoxyParamCaption}\item[{int}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function puts the L\+CD cursor at the specified line. 
+
+This function is used to change the location of the cursor. The next time a print is done, it will print starting at the new cursor location.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & is the line to move the cursor to (line 1 or line 2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brandon Altieri 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classlcdScreen_a58dd837a0783c439a50d11df6fc19d43}\label{classlcdScreen_a58dd837a0783c439a50d11df6fc19d43}} 
+\index{lcd\+Screen@{lcd\+Screen}!typeln@{typeln}}
+\index{typeln@{typeln}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection{\texorpdfstring{typeln()}{typeln()}}
+{\footnotesize\ttfamily void lcd\+Screen\+::typeln (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function prints a string to the L\+CD. 
+
+This function is used to print a string to the L\+CD\textquotesingle{}s screen via I2C.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & is the pointer to the first character of the string to be printed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Brandon Altieri 
+\end{DoxyAuthor}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlcdScreen_af99d17c01d4ce8459247f8043b2de102}\label{classlcdScreen_af99d17c01d4ce8459247f8043b2de102}} 
+\index{lcd\+Screen@{lcd\+Screen}!Outputs@{Outputs}}
+\index{Outputs@{Outputs}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection{\texorpdfstring{Outputs}{Outputs}}
+{\footnotesize\ttfamily friend class \hyperlink{classOutputs}{Outputs}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlcdScreen_a1810308c22efd469be71020079c05d2c}\label{classlcdScreen_a1810308c22efd469be71020079c05d2c}} 
+\index{lcd\+Screen@{lcd\+Screen}!fd@{fd}}
+\index{fd@{fd}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily int lcd\+Screen\+::fd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lcdScreen_8h}{lcd\+Screen.\+h}\item 
+\hyperlink{lcdScreen_8cpp}{lcd\+Screen.\+cpp}\end{DoxyCompactItemize}
